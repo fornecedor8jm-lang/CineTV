@@ -17,6 +17,7 @@
     "check:server-boundaries": "node scripts/check-server-boundaries.mjs",
     "posters:fix": "node scripts/fix-embedplay-posters.mjs",
     "titles:sync": "node scripts/sync-embedplay-titles.mjs",
+    "routes:normalize": "node scripts/normalize-embedplay-route-ids.mjs",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio",
