@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
+import type { Episode } from '@/lib/data';
 import {
   getById,
   isSeries,
@@ -56,8 +57,8 @@ export default function TitlePage() {
     play(item);
     markWatched(item.id, 0.05);
   };
-  const playEpisode = (n: number) => {
-    play(item, { label: `${item.title} · Episódio ${n}` });
+  const playEpisode = (episode: Episode) => {
+    play(item, { label: `${item.title} · ${episode.title}`, src: episode.watchUrl });
     markWatched(item.id, 0.05);
   };
 
@@ -223,7 +224,7 @@ export default function TitlePage() {
                   className="flex items-center gap-4 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-primary/40 hover:bg-white/[0.06]"
                 >
                   <button
-                    onClick={() => playEpisode(ep.number)}
+                    onClick={() => playEpisode(ep)}
                     className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/15 text-ink transition hover:border-primary hover:text-primary"
                     aria-label={`Assistir episódio ${ep.number}`}
                   >

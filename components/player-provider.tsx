@@ -13,7 +13,7 @@ import { getById, watchSource, type CatalogItem } from '@/lib/catalog';
 import { useLibrary } from '@/components/library-provider';
 
 type PlayerState = {
-  play: (item: CatalogItem, opts?: { label?: string }) => void;
+  play: (item: CatalogItem, opts?: { label?: string; src?: string }) => void;
   close: () => void;
   active: CatalogItem | null;
   label: string;
@@ -25,23 +25,31 @@ const PlayerContext = createContext<PlayerState | null>(null);
 export function PlayerProvider({ children }: { children: ReactNode }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [label, setLabel] = useState('');
+  const [sourceOverride, setSourceOverride] = useState<string | null>(null);
   const { markWatched } = useLibrary();
 
   const active = activeId ? getById(activeId) ?? null : null;
-  const src = active ? watchSource(active) : null;
+  const src = sourceOverride ?? (active ? watchSource(active) : null);
 
-  const play = useCallback((item: CatalogItem, opts?: { label?: string }) => {
+  const play = useCallback((item: CatalogItem, opts?: { label?: string; src?: string }) => {
     setLabel(opts?.label ?? '');
+    setSourceOverride(opts?.src ?? null);
     setActiveId(item.id);
     markWatched(item.id, 0.05);
   }, [markWatched]);
 
-  const close = useCallback(() => setActiveId(null), []);
+  const close = useCallback(() => {
+    setActiveId(null);
+    setSourceOverride(null);
+  }, []);
 
   useEffect(() => {
     if (!activeId) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setActiveId(null);
+      if (e.key === 'Escape') {
+        setActiveId(null);
+        setSourceOverride(null);
+      }
     };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
