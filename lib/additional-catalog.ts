@@ -1,0 +1,88 @@
+import type { CatalogItem } from './data';
+
+export const additionalCatalog: CatalogItem[] = [
+  {
+    id: 'lethal-weapon-1', title: 'Máquina Mortífera (1987)', year: '1987', type: 'Filme',
+    genres: ['Ação', 'Policial'], tags: ['Ação', 'Policial'], synopsis: 'Um policial veterano é obrigado a formar dupla com um detetive instável para investigar uma rede de tráfico.',
+    poster: '/posters/lethal-weapon-1.jpg', hero: '/posters/lethal-weapon-1.jpg', seasons: 'filme', language: 'Dublado / Legendado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt0093409', watchLabel: 'Assistir agora', embedPlayId: 'tt0093409', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'lethal-weapon-2', title: 'Máquina Mortífera 2', year: '1989', type: 'Filme',
+    genres: ['Ação', 'Policial'], tags: ['Ação', 'Policial'], synopsis: 'Riggs e Murtaugh protegem uma testemunha enquanto enfrentam criminosos perigosos e uma conspiração internacional.',
+    poster: '/posters/lethal-weapon-2.jpg', hero: '/posters/lethal-weapon-2.jpg', seasons: 'filme', language: 'Dublado / Legendado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt0097733', watchLabel: 'Assistir agora', embedPlayId: 'tt0097733', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'lethal-weapon-3', title: 'Máquina Mortífera 3', year: '1992', type: 'Filme',
+    genres: ['Ação', 'Policial'], tags: ['Ação', 'Policial'], synopsis: 'A dupla investiga armas roubadas e a corrupção policial enquanto tenta sobreviver ao caos de Los Angeles.',
+    poster: '/posters/lethal-weapon-3.jpg', hero: '/posters/lethal-weapon-3.jpg', seasons: 'filme', language: 'Dublado / Legendado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt0101301', watchLabel: 'Assistir agora', embedPlayId: 'tt0101301', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'lethal-weapon-4', title: 'Máquina Mortífera 4', year: '1998', type: 'Filme',
+    genres: ['Ação', 'Policial'], tags: ['Ação', 'Policial'], synopsis: 'Riggs e Murtaugh enfrentam uma quadrilha internacional e as mudanças de uma nova fase de suas vidas.',
+    poster: '/posters/lethal-weapon-4.jpg', hero: '/posters/lethal-weapon-4.jpg', seasons: 'filme', language: 'Dublado / Legendado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt0122151', watchLabel: 'Assistir agora', embedPlayId: 'tt0122151', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: '50-states-of-fright', title: '50 States of Fright', year: '', type: 'Série',
+    genres: ['Terror', 'Antologia'], tags: ['Terror', 'Antologia'], synopsis: '',
+    poster: '/posters/50-states-of-fright_0036072a.jpg', hero: '/posters/50-states-of-fright_0036072a.jpg', seasons: '2 temporadas', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: 'tt9104072', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'into-the-dark', title: 'Into the Dark', year: '', type: 'Série',
+    genres: ['Terror', 'Antologia'], tags: ['Terror', 'Antologia'], synopsis: '',
+    poster: '/posters/into-the-dark_681a33ca.jpg', hero: '/posters/into-the-dark_681a33ca.jpg', seasons: '2 temporadas', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: 'tt8427140', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'alphas', title: 'Alphas', year: '', type: 'Série',
+    genres: ['Ficção científica', 'Ação', 'Drama'], tags: ['Ficção científica', 'Ação', 'Drama'], synopsis: '',
+    poster: '/posters/alphas_5ba5d7e8.jpg', hero: '/posters/alphas_5ba5d7e8.jpg', seasons: '2 temporadas', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: 'tt1183865', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'supernatural-anime', title: 'Supernatural Anime', year: '', type: 'Anime',
+    genres: ['Sobrenatural', 'Anime', 'Terror'], tags: ['Sobrenatural', 'Anime', 'Terror'], synopsis: '',
+    poster: '/posters/supernatural-anime_bddce6ed.jpg', hero: '/posters/supernatural-anime_bddce6ed.jpg', seasons: '1 temporada', language: 'Dublado e Legendado',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: '', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'witcher-nightmare', title: 'The Witcher: Nightmare of the Wolf', year: '2021', type: 'Anime',
+    genres: ['Fantasia', 'Ação', 'Aventura'], tags: ['Fantasia', 'Ação', 'Aventura'], synopsis: '',
+    poster: '/posters/witcher-nightmare_268ee5fe.jpg', hero: '/posters/witcher-nightmare_268ee5fe.jpg', seasons: '1 filme · 1h23', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: '', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'tapas-e-beijos', title: 'Tapas & Beijos', year: '2011', type: 'Série',
+    genres: ['Comédia', 'Nacional'], tags: ['Comédia', 'Nacional'], synopsis: '',
+    poster: '/posters/tapas-beijos_544f0734.jpg', hero: '/posters/tapas-beijos_544f0734.jpg', seasons: '5 temporadas', language: 'Português',
+    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir agora', embedPlayId: 'tt1974895', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'professor-madman', title: 'O Gênio e o Louco', year: '2019', type: 'Filme',
+    genres: ['Drama', 'História', 'Biografia'], tags: ['Drama', 'História', 'Biografia'], synopsis: '',
+    poster: '/posters/professor-madman_ee6efec0.jpg', hero: '/posters/professor-madman_ee6efec0.jpg', seasons: 'Filme', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt5932728', watchLabel: 'Assistir agora', embedPlayId: '', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+  {
+    id: 'gabriel-vinganca', title: 'Gabriel: A Vingança de um Anjo', year: '2007', type: 'Filme',
+    genres: ['Ação', 'Terror'], tags: ['Ação', 'Terror'], synopsis: 'Um anjo caído instaura o reino da escuridão na Terra, e Gabriel, o último arcanjo, luta contra ele enquanto um segredo ameaça destruir o guerreiro.',
+    poster: '/posters/gabriel_c5ffee43.jpg', hero: '/posters/gabriel_c5ffee43.jpg', seasons: '1h54 · filme', language: 'Não informado',
+    imdbRating: undefined, rating: '', watchUrl: 'https://embedplayapi.top/embed/tt0857376', watchLabel: 'Assistir agora', embedPlayId: '', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    seriesSeasons: [],
+  },
+];
