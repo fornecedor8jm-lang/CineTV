@@ -1,6 +1,4 @@
 // Catálogo do Cine TV — títulos com player reproduzível e verificado (35 títulos).
-import { additionalCatalog } from './additional-catalog';
-
 export type Episode = { number: number; title: string; synopsis?: string };
 export type Season = { number: number; episodes: Episode[] };
 export type CatalogItem = {
@@ -11,7 +9,7 @@ export type CatalogItem = {
   embedPlayId: string; trailerUrl: string; availability: string;
   featured: boolean; seriesSeasons: Season[];
 };
-const baseCatalog: CatalogItem[] = [
+export const catalog: CatalogItem[] = [
   { id: 'lethal-weapon-series', title: 'Máquina Mortífera — Série (2016)', year: '2016', type: 'Série', genres: ['Ação', 'Policial', 'Drama'], tags: ['Máquina Mortífera', 'Dupla policial', 'Los Angeles'], synopsis: 'Dois policiais com personalidades opostas formam uma parceria explosiva para combater o crime em Los Angeles.', poster: '/posters/lethal-weapon-series.jpg', hero: '/posters/lethal-weapon-series.jpg', seasons: '3 temporadas', language: 'Dublado / Legendado', imdbRating: undefined, rating: '', watchUrl: '', watchLabel: '', embedPlayId: 'tt5164196', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
     seriesSeasons: [
       { number: 1, episodes: [
@@ -1866,5 +1864,3 @@ const baseCatalog: CatalogItem[] = [
     ],
   },
 ];
-
-export const catalog: CatalogItem[] = [...baseCatalog, ...additionalCatalog];
