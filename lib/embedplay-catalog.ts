@@ -563,7 +563,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-272586", title: "Terra de Pecados", year: "", type: "Série",
+    id: "embedplay-série-272586", title: "Synden", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 272586", "tt33501959"], synopsis: "Depois que um adolescente desaparece, uma policial com vínculos pessoais ao caso embarca em uma investigação tensa, que revela alianças e antigos conflitos familiares.",
     poster: "/posters/embedplay-301507.jpg", hero: "/posters/embedplay-301507.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -571,7 +571,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-244244", title: "Custe o que Custar", year: "", type: "Série",
+    id: "embedplay-série-244244", title: "Run Away", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 244244", "tt9169516"], synopsis: "Em busca da filha que fugiu, um pai desesperado acaba envolvido em um caso de assassinato e descobre segredos que podem destruir sua família de vez.",
     poster: "/posters/embedplay-272418.jpg", hero: "/posters/embedplay-272418.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -579,7 +579,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-259909", title: "Dexter: Ressurreição", year: "", type: "Série",
+    id: "embedplay-série-259909", title: "Dexter: Resurrection", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 259909", "tt33043892"], synopsis: "Dexter Morgan acorda do coma e vai para Nova Iorque, determinado a encontrar Harrison e consertar as coisas, mas quando Angel Batista da Miami Metro chega com perguntas, Dexter percebe que seu passado está mais próximo do que nunca.",
     poster: "/posters/embedplay-247718.jpg", hero: "/posters/embedplay-247718.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -587,7 +587,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-200875", title: "IT: Bem-Vindos a Derry", year: "", type: "Série",
+    id: "embedplay-série-200875", title: "IT: Welcome to Derry", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 200875", "tt19244304"], synopsis: "Durante as férias de 1958, em uma pacata cidadezinha chamada Derry, um grupo de sete amigos começa a ver coisas bizarras. Um conta que viu um palhaço, outro que viu uma múmia. Finalmente, acabam descobrindo que estavam todos vendo a mesma coisa: um ser sobrenatural e maligno que pode assumir várias formas. Ele mesmo. O Pennywise.",
     poster: "/posters/embedplay-279601.jpg", hero: "/posters/embedplay-279601.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -611,7 +611,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-301507", title: "Rivalidade Ardente", year: "", type: "Série",
+    id: "embedplay-série-301507", title: "Heated Rivalry", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 301507", "tt35495073"], synopsis: "Duas estrelas do hóquei no gelo vivem um romance secreto que dura anos enquanto perseguem a glória e lutam com seus sentimentos.",
     poster: "/posters/embedplay-158141.jpg", hero: "/posters/embedplay-158141.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -635,7 +635,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-247718", title: "Terra da Máfia", year: "", type: "Série",
+    id: "embedplay-série-247718", title: "MobLand", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 247718", "tt31510819"], synopsis: "O poder está em disputa quando duas famílias do crime se chocam numa batalha que ameaça derrubar impérios e arruinar vidas. No meio está Harry Da Souza, um \"resolvedor de problemas\" que sabe bem onde a lealdade está quando as forças opostas colidem.",
     poster: "/posters/embedplay-241199.jpg", hero: "/posters/embedplay-241199.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -643,7 +643,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-279601", title: "Homem X Bebê", year: "", type: "Série",
+    id: "embedplay-série-279601", title: "Man vs Baby", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 279601", "tt35047134"], synopsis: "Perto do Natal, um caseiro atrapalhado precisa tomar conta de uma cobertura chique e ainda lidar com um problema inesperado: um bebê perdido.",
     poster: "/posters/embedplay-213612.jpg", hero: "/posters/embedplay-213612.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -675,7 +675,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-71712", title: "The Good Doctor: O Bom Doutor", year: "", type: "Série",
+    id: "embedplay-série-71712", title: "The Good Doctor", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 71712", "tt6470478"], synopsis: "Um jovem médico com autismo começa a trabalhar em um famoso hospital. Além dos desafios da profissão, ele terá também que provar sua capacidade a seus colegas e superiores.",
     poster: "/posters/embedplay-253225.jpg", hero: "/posters/embedplay-253225.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -683,7 +683,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-235779", title: "Na Rota do Ouro", year: "", type: "Série",
+    id: "embedplay-série-235779", title: "Briganti", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 235779", "tt15441086"], synopsis: "Em uma Itália do século 19 dominada por bandidos, Filomena abandona uma vida confortável e sem graça para liderar uma caça ao tesouro cheia de perigos.",
     poster: "/posters/embedplay-156029.jpg", hero: "/posters/embedplay-156029.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -691,7 +691,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-247769", title: "Kapil Sharma para Viagem", year: "", type: "Série",
+    id: "embedplay-série-247769", title: "द ग्रेट इंडियन कपिल शो", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 247769", "tt30003786"], synopsis: "O comediante Kapil Sharma apresenta este talk show que vai fazer você rolar de rir com as celebridades convidadas e seu incrível elenco de apoio.",
     poster: "/posters/embedplay-250361.jpg", hero: "/posters/embedplay-250361.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -699,7 +699,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-241199", title: "Pronta Para o Amor", year: "", type: "Série",
+    id: "embedplay-série-241199", title: "瓜を破る～一線を越えた、その先には", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 241199", "tt31067853"], synopsis: "Uma funcionária de escritório decide que está na hora de ter aquela experiência amorosa que tanto lhe falta. O problema é que namorar significa ter que lidar com homens.",
     poster: "/posters/embedplay-252100.jpg", hero: "/posters/embedplay-252100.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -707,7 +707,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-213612", title: "Planeta Vivo", year: "", type: "Série",
+    id: "embedplay-série-213612", title: "Our Living World", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 213612", "tt23181418"], synopsis: "Esta série incrível sobre a natureza analisa a inteligência, a criatividade e a interconexão da vida no nosso planeta. Com narração de Cate Blanchett na versão em inglês.",
     poster: "/posters/embedplay-201177.jpg", hero: "/posters/embedplay-201177.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -715,7 +715,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-196322", title: "Matéria Escura", year: "", type: "Série",
+    id: "embedplay-série-196322", title: "Dark Matter", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 196322", "tt19231492"], synopsis: "Jason Dessen é sequestrado para uma versão alternativa de sua vida. Em busca de voltar para sua verdadeira família, ele embarca em uma jornada angustiante para salvá-los do inimigo mais terrível que se possa imaginar: ele mesmo.",
     poster: "/posters/embedplay-156716.jpg", hero: "/posters/embedplay-156716.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -723,7 +723,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-251091", title: "Star Wars: Histórias do Império", year: "", type: "Série",
+    id: "embedplay-série-251091", title: "Star Wars: Tales of the Empire", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 251091", "tt32019314"], synopsis: "A jornada pelo assutador Império Galáctico pelos olhos de duas guerreiras em caminhos diferentes.",
     poster: "/posters/embedplay-221120.jpg", hero: "/posters/embedplay-221120.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -731,7 +731,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-247453", title: "Todo Mundo Me Ama", year: "", type: "Série",
+    id: "embedplay-série-247453", title: "别对我动心", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 247453", "tt28131856"], synopsis: "A meiga Yue Qianling (Zhou Ye) há muito tempo nutre uma paixão por seu antigo colega da universidade Gu Xun (Lin Yi). Por isso, ela fica muito feliz quando o destino os reúne na mesma empresa de jogos, onde ela tem a chance de confessar os sentimentos a ele e assim o faz. Porém, acaba sendo rejeitada por Xun, que já está apaixonado por uma jogadora durona da internet que ele nunca conheceu. Contudo, mal sabe ele que essa jogadora é, na verdade, Qianling, que adota uma personalidade feroz on-line. Agora, com sua identidade e amor na balança, revelar quem ela realmente é pode tanto aproximá-los quanto afastá-los. Esta série de drama chinesa de 2024 foi dirigida por Yu Chung Chung e Lee Ching Jung.",
     poster: "/posters/embedplay-241257.jpg", hero: "/posters/embedplay-241257.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -747,7 +747,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-156029", title: "O Índice do Medo", year: "", type: "Série",
+    id: "embedplay-série-156029", title: "The Fear Index", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 156029", "tt1967620"], synopsis: "Um cientista que virou magnata de Wall Street torna-se alvo de um plano para destruir os mercados financeiros do mundo.",
     poster: "/posters/embedplay-157023.jpg", hero: "/posters/embedplay-157023.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -755,7 +755,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-250361", title: "Na Luta pelo Paraíso: Alemanha", year: "", type: "Série",
+    id: "embedplay-série-250361", title: "Fight for Paradise: Wem kannst Du trauen?", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 250361", "tt31844701"], synopsis: "Seja na Mansão ou na selva, os participantes precisam manter os amigos por perto, e os inimigos mais perto ainda. Valendo uma entrada para o paraíso e 100 mil euros.",
     poster: "/posters/embedplay-251883.jpg", hero: "/posters/embedplay-251883.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -763,7 +763,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-252100", title: "Cartões-postais", year: "", type: "Série",
+    id: "embedplay-série-252100", title: "Postcards", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 252100", "tt31691316"], synopsis: "Uma mãe solo nigeriana vai à Índia para fazer um check-up médico, numa trajetória que toca a vida de todos que cruzam seu caminho.",
     poster: "/posters/embedplay-245754.jpg", hero: "/posters/embedplay-245754.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -779,7 +779,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-156716", title: "Heeramandi: O Bazar de Diamantes", year: "", type: "Série",
+    id: "embedplay-série-156716", title: "हीरामंडी: द डायमंड बाज़ार", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 156716", "tt15204292"], synopsis: "A calculista Mallikajaan comanda uma casa de cortesãs de elite, mas uma nova rival ameaça seu reinado enquanto uma rebelião se instaura na Índia Britânica.",
     poster: "/posters/embedplay-250670.jpg", hero: "/posters/embedplay-250670.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -795,7 +795,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-214719", title: "Branson: Aventuras de um Bilionário", year: "", type: "Série",
+    id: "embedplay-série-214719", title: "Law & Order: Special Victims Unit", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 214719", "tt23865600"], synopsis: "25 de junho de 2021. Faltando 16 dias para Richard Branson voar para o espaço, o empresário reflete sobre seus primeiros anos, desde a influência da iconoclastia de sua mãe até a criação da Virgin.",
     poster: "/posters/embedplay-253249.jpg", hero: "/posters/embedplay-253249.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -811,7 +811,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253485", title: "O Cozinheiro Assassino: A História de César Román", year: "", type: "Série",
+    id: "embedplay-série-253485", title: "El Rey del Cachopo", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253485", "tt32097426"], synopsis: "Esta série documental analisa o caso de assassinato envolvendo um chef espanhol, que construiu uma carreira brilhante com muitos segredos e uma identidade falsa.",
     poster: "/posters/embedplay-253344.jpg", hero: "/posters/embedplay-253344.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -819,7 +819,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-157023", title: "Brené Brown: Atlas do Coração", year: "", type: "Série",
+    id: "embedplay-série-157023", title: "Brené Brown: Atlas of the Heart", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 157023", "tt15590294"], synopsis: "Researcher and six-time #1 New York Times bestselling author Dr. Brené Brown takes viewers on an interactive journey through the emotions and experiences that define what it means to be human. Grounded in more than two decades of research, Brown brings together a dynamic mix of powerful storytelling, pop culture references, and a range of impressive researchers to share the language, tools, and framework for meaningful connection.",
     poster: "/posters/embedplay-90239.jpg", hero: "/posters/embedplay-90239.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -827,7 +827,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-251883", title: "Próximo!", year: "", type: "Série",
+    id: "embedplay-série-251883", title: "Kimler Geldi Kimler Geçti", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 251883", "tt28267514"], synopsis: "Após um término doloroso, uma advogada mergulha de cabeça no mundo caótico dos namoros modernos com a ajuda inabalável dos melhores amigos.",
     poster: "/posters/embedplay-156484.jpg", hero: "/posters/embedplay-156484.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -835,7 +835,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-245754", title: "Super-Ricos na Coreia", year: "", type: "Série",
+    id: "embedplay-série-245754", title: "슈퍼리치 이방인", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 245754", "tt31038436"], synopsis: "Conheça a vida luxuosa dos multimilionários na Coreia: um magnata de Singapura, o herdeiro de uma marca de luxo da Itália e uma integrante da nobreza do Paquistão.",
     poster: "/posters/embedplay-236537.jpg", hero: "/posters/embedplay-236537.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -843,7 +843,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-225120", title: "Um Homem por Inteiro", year: "", type: "Série",
+    id: "embedplay-série-225120", title: "A Man in Full", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 225120", "tt15845610"], synopsis: "Enfrentando adversários implacáveis e uma falência repentina, um magnata do mercado imobiliário de Atlanta faz de tudo para voltar ao topo quando seu império desmorona.",
     poster: "/posters/embedplay-227219.jpg", hero: "/posters/embedplay-227219.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -851,7 +851,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-250670", title: "Maxton Hall - O Mundo Entre Nós", year: "", type: "Série",
+    id: "embedplay-série-250670", title: "Maxton Hall – Die Welt zwischen uns", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 250670", "tt27792190"], synopsis: "Quando Ruby testemunha, sem querer, um segredo explosivo na escola particular de Maxton Hall, o arrogante e milionário herdeiro James Beaufort tem que lidar, para seu desgosto, com a perspicaz estudante bolsista, e está determinado a silenciar Ruby. A apaixonada troca de insultos entre eles surpreendentemente acende uma faísca...",
     poster: "/posters/embedplay-153488.jpg", hero: "/posters/embedplay-153488.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -859,7 +859,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-197124", title: "The Big Cigar: a Fuga", year: "", type: "Série",
+    id: "embedplay-série-197124", title: "The Big Cigar", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 197124", "tt19399602"], synopsis: "O co-fundador do Partido dos Panteras Negras, Huey P. Newton, recruta um aliado improvável, o produtor de Hollywood, Bert Schneider, para escapar de uma perseguição do FBI e fugir para Cuba.",
     poster: "/posters/embedplay-106393.jpg", hero: "/posters/embedplay-106393.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -867,7 +867,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253249", title: "Ashley Madison: Sexo, Mentiras e Escândalo", year: "", type: "Série",
+    id: "embedplay-série-253249", title: "Ashley Madison: Sex, Lies & Scandal", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253249", "tt32307741"], synopsis: "Um site de namoro para adúlteros foi hackeado, expondo dados íntimos de milhões de usuários, acabando com casamentos e destruindo vidas.",
     poster: "/posters/embedplay-157747.jpg", hero: "/posters/embedplay-157747.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -875,7 +875,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-138492", title: "As Crônicas de Spiderwick", year: "", type: "Série",
+    id: "embedplay-série-138492", title: "The Spiderwick Chronicles", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 138492", "tt16026032"], synopsis: "Acompanha a família Grace – os gêmeos Jared e Simon, a irmã Mallory e a mãe Helen – que se mudam para a casa de seus ancestrais e começam a desvendar um sombrio mistério sobre seu tio-bisavô que uma vez descobriu o mundo secreto e talvez presunçoso das fadas que existem paralelamente ao seu.",
     poster: "/posters/embedplay-136315.jpg", hero: "/posters/embedplay-136315.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -883,7 +883,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253344", title: "Seis Não É Demais", year: "", type: "Série",
+    id: "embedplay-série-253344", title: "Felices los 6", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253344", "tt32263045"], synopsis: "Um romântico incurável precisa repensar todos seus preconceitos sobre relacionamentos quando descobre que a garota dos seus sonhos é poliamorosa.",
     poster: "/posters/embedplay-230820.jpg", hero: "/posters/embedplay-230820.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -891,7 +891,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-90239", title: "O Jogo das Chaves", year: "", type: "Série",
+    id: "embedplay-série-90239", title: "El juego de las llaves", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 90239", "tt9863788"], synopsis: "O jogo das chaves é uma comédia sobre monogamia a longo prazo, auto-realização e desejo. A série segue quatro casais duradouros que são amigos e que decidem ser swingers entre eles.",
     poster: "/posters/embedplay-201420.jpg", hero: "/posters/embedplay-201420.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -907,7 +907,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253913", title: "As Forças Armadas Mais Severas do Mundo", year: "", type: "Série",
+    id: "embedplay-série-253913", title: "Toughest Forces on Earth", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253913", "tt25166726"], synopsis: "Três veteranos aventureiros treinam ao lado de algumas das maiores tropas de elite do mundo, mostrando suas táticas e armamentos.",
     poster: "/posters/embedplay-252729.jpg", hero: "/posters/embedplay-252729.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -923,7 +923,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-227219", title: "Ed Stafford: Sobrevivendo nas Periferias", year: "", type: "Série",
+    id: "embedplay-série-227219", title: "60 Days on the Estates", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 227219", "tt28440917"], synopsis: "Dificuldades que os moradores enfrentam em alguns dos condomínios mais problemáticos do Reino Unido. Em Londres, crime armado e com facas em Northumberland Park. Crianças de apenas 13 anos ainda estão sendo atraídas para isso.",
     poster: "/posters/embedplay-253389.jpg", hero: "/posters/embedplay-253389.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -947,7 +947,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-157747", title: "Transformers: A Centelha da Terra", year: "", type: "Série",
+    id: "embedplay-série-157747", title: "Transformers: EarthSpark", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 157747", "tt14298658"], synopsis: "Os irmãos Robby e Mo Malto acidentalmente desencadeiam a criação de novos Transformers nascidos na Terra chamados Terrans. A Família Malto promete manter os novos bots seguros.",
     poster: "/posters/embedplay-237512.jpg", hero: "/posters/embedplay-237512.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -955,7 +955,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-136315", title: "O Urso", year: "", type: "Série",
+    id: "embedplay-série-136315", title: "The Bear", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 136315", "tt14452776"], synopsis: "Carmy, um jovem chefe requintado, volta para Chicago para administrar a lanchonete de sua família. Enquanto ele luta para transformar a loja e a si mesmo, ele trabalha ao lado de uma equipe medíocre que acaba se transformando na sua família.",
     poster: "/posters/embedplay-238938.jpg", hero: "/posters/embedplay-238938.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -963,7 +963,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-230820", title: "Largados, Pelados e Ilhados", year: "", type: "Série",
+    id: "embedplay-série-230820", title: "Naked and Afraid: Castaways", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 230820", "tt28310762"], synopsis: "Agora os vencedores de outras temporadas estarão em um novo desafio em ilhas remotas e cheias de perigos.",
     poster: "/posters/embedplay-236436.jpg", hero: "/posters/embedplay-236436.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -971,7 +971,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-255590", title: "Quilos Mortais México", year: "", type: "Série",
+    id: "embedplay-série-255590", title: "Kilos Mortales México", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 255590", "tt32491169"], synopsis: "A luta de indivíduos com obesidade extrema que devem ser submetidos a uma cirurgia para salvar suas vidas.",
     poster: "/posters/embedplay-247522.jpg", hero: "/posters/embedplay-247522.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -979,7 +979,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-201420", title: "A Messias", year: "", type: "Série",
+    id: "embedplay-série-201420", title: "La mesías", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 201420", "tt20096840"], synopsis: "Uma série dramática com toques de suspense e realismo mágico sobre Enric e Ingrid, dois irmãos determinados a enfrentar seus traumas de infância para salvar um grupo de meninas do abandono e do fanatismo religioso.",
     poster: "/posters/embedplay-209708.jpg", hero: "/posters/embedplay-209708.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -987,7 +987,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-214837", title: "Capitães da América", year: "", type: "Série",
+    id: "embedplay-série-214837", title: "Capitanes de America", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 214837"], synopsis: "A vida de oito famosos jogadores profissionais de futebol vindos de diversos cantos da América e com uma característica em comum: eles transcenderam seus tempos e times para se tornarem lendas.",
     poster: "/posters/embedplay-84105.jpg", hero: "/posters/embedplay-84105.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -995,7 +995,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-252729", title: "Nick e Aaron Carter: A Queda dos Ídolos", year: "", type: "Série",
+    id: "embedplay-série-252729", title: "Fallen Idols: Nick and Aaron Carter", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 252729", "tt32203228"], synopsis: "Explorando a controvérsia em torno das alegações de agressão sexual contra Nick Carter e as batalhas pessoais enfrentadas por seu irmão Aaron, incluindo problemas de saúde mental e abuso de substâncias.",
     poster: "/posters/embedplay-130477.jpg", hero: "/posters/embedplay-130477.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1003,7 +1003,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-239529", title: "Pelados e Condenados", year: "", type: "Série",
+    id: "embedplay-série-239529", title: "Exposed: Naked Crimes", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 239529", "tt30195843"], synopsis: "Fique cara a cara com os criminosos mais imprudentes e sem roupa capturados pelas câmeras. Testemunhas e policiais compartilham histórias inéditas sobre crimes cometidos de maneira inusitada.",
     poster: "/posters/embedplay-99363.jpg", hero: "/posters/embedplay-99363.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1011,7 +1011,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253389", title: "Bebidas do Mundo com Shay Mitchell", year: "", type: "Série",
+    id: "embedplay-série-253389", title: "Thirst with Shay Mitchell", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253389", "tt32421379"], synopsis: "Shay Mitchell\", ela viaja por países como Brasil, Argentina, Colômbia, e Peru, conhecendo as maiores tendências na área de bebidas",
     poster: "/posters/embedplay-133784.jpg", hero: "/posters/embedplay-133784.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1019,7 +1019,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253384", title: "Dançando para o Diabo", year: "", type: "Série",
+    id: "embedplay-série-253384", title: "Dancing for the Devil: The 7M TikTok Cult", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253384", "tt32307218"], synopsis: "Vários dançarinos do TikTok entraram para uma agência de gestão de carreiras associada a uma igreja. Só que informações perturbadoras sobre o fundador vieram à tona.",
     poster: "/posters/embedplay-119790.jpg", hero: "/posters/embedplay-119790.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1027,7 +1027,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-253361", title: "A Vida que Você Queria", year: "", type: "Série",
+    id: "embedplay-série-253361", title: "La vita che volevi", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 253361", "tt28019927"], synopsis: "Gloria se sente feliz pela primeira vez desde a transição. Mas seu mundo vira de pernas para o ar depois que uma amiga do passado reaparece com uma notícia bombástica.",
     poster: "/posters/embedplay-129.jpg", hero: "/posters/embedplay-129.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1035,7 +1035,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-237512", title: "Jurassic World: Teoria do Caos", year: "", type: "Série",
+    id: "embedplay-série-237512", title: "Jurassic World: Chaos Theory", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 237512", "tt29899148"], synopsis: "A turma do acampamento jurássico se une para desvendar um mistério quando descobrem uma conspiração global que ameaça não apenas os dinossauros, mas também a eles mesmos.",
     poster: "/posters/embedplay-130.jpg", hero: "/posters/embedplay-130.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1043,7 +1043,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-238938", title: "O Mistério da Rota 20", year: "", type: "Série",
+    id: "embedplay-série-238938", title: "Lost Women of Highway 20", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 238938", "tt27497479"], synopsis: "Quando uma jornalista local descobre um documento judicial selado, ela descobre um rastro de mulheres desaparecidas e assassinadas no deserto de Oregon e um assassino que usou um trecho desolado da estrada para esconder segredos obscuros.",
     poster: "/posters/embedplay-131.jpg", hero: "/posters/embedplay-131.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1051,7 +1051,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-236436", title: "Na Mira dos Sequestradores", year: "", type: "Série",
+    id: "embedplay-série-236436", title: "Hostage 911", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 236436", "tt29426050"], synopsis: "Negociadores registram conversas angustiantes com criminosos que fizeram reféns. Em cada impasse aterrorizante, ouça suas conversas com criminosos e os negociadores analisarão suas táticas psicológicas. Os reféns sairão vivos?",
     poster: "/posters/embedplay-132.jpg", hero: "/posters/embedplay-132.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1059,7 +1059,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-247522", title: "O Rei dos Pneus", year: "", type: "Série",
+    id: "embedplay-série-247522", title: "Tires", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 247522", "tt31491435"], synopsis: "Um gerente meio deprê rala para melhorar o atendimento e aumentar os lucros da oficina do pai; e ainda tem que manter o primo sem noção na linha.",
     poster: "/posters/embedplay-133.jpg", hero: "/posters/embedplay-133.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1067,7 +1067,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-209708", title: "Poder de Princesa", year: "", type: "Série",
+    id: "embedplay-série-209708", title: "Princess Power", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 209708", "tt22013036"], synopsis: "As amigas princesas dos Fruti-reinos Mirtilo, Kiwi, Abacaxi e Framboesa não param por nada em sua missão de fazer do mundo um lugar melhor.",
     poster: "/posters/embedplay-134.jpg", hero: "/posters/embedplay-134.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1083,7 +1083,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-130477", title: "A Inundação do Milênio", year: "", type: "Série",
+    id: "embedplay-série-130477", title: "Wielka woda", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 130477", "tt15096728"], synopsis: "Em 1997, cientistas e funcionários do governo local na Breslávia enfrentam decisões de vida ou morte depois que uma inundação devastadora ameaça a cidade.",
     poster: "/posters/embedplay-136.jpg", hero: "/posters/embedplay-136.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1091,7 +1091,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-99363", title: "Rumo ao Desconhecido: Mistérios Paranormais", year: "", type: "Série",
+    id: "embedplay-série-99363", title: "Expedition X", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 99363", "tt11774420"], synopsis: "O aventureiro Josh Gates, o cientista Phil Torres e a pesquisadora paranormal Jessica Chobot investigam relatos de encontros sobrenaturais, criaturas misteriosas e fenômenos extraterrestres.",
     poster: "/posters/embedplay-137.jpg", hero: "/posters/embedplay-137.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1099,7 +1099,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-133784", title: "Ritmo + Flow: França", year: "", type: "Série",
+    id: "embedplay-série-133784", title: "Nouvelle École", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 133784", "tt20192132"], synopsis: "Rappers franceses improvisam, rimam e se enfrentam para levar o prêmio de 100 mil euros em uma competição musical liderada por um trio de jurados famosos.",
     poster: "/posters/embedplay-138.jpg", hero: "/posters/embedplay-138.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
@@ -1107,7 +1107,7 @@ export const embedPlayCatalog: CatalogItem[] = [
     availability: 'Player EmbedPlay', featured: false, seriesSeasons: [{"number": 1, "episodes": []}],
   },
   {
-    id: "embedplay-série-249855", title: "Sete Abismos", year: "", type: "Série",
+    id: "embedplay-série-249855", title: "滅相も無い", year: "", type: "Série",
     genres: ["Gênero não informado"], tags: ["Série", "Embed Play", "TMDB 249855", "tt32152441"], synopsis: "Sete buracos enormes aparecem no Japão e há quem acredite que eles são deuses. Oito pessoas contam com a ajuda de um mestre para se aventurar em caminhos desconhecidos.",
     poster: "/posters/embedplay-139.jpg", hero: "/posters/embedplay-139.jpg", seasons: "Série",
     language: "Metadados TMDB / Embed Play", imdbRating: undefined, rating: '',
