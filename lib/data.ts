@@ -1,5 +1,6 @@
 // Catálogo do Cine TV — títulos com player reproduzível e verificado (35 títulos).
 import { migratedCatalog } from './migrated-catalog';
+import { embedPlayCatalog } from './embedplay-catalog';
 
 export type Episode = { number: number; title: string; synopsis?: string; watchUrl?: string };
 export type Season = { number: number; episodes: Episode[] };
@@ -1867,4 +1868,4 @@ const baseCatalog: CatalogItem[] = [
   },
 ];
 
-export const catalog: CatalogItem[] = [...baseCatalog, ...migratedCatalog];
+export const catalog: CatalogItem[] = [...baseCatalog, ...migratedCatalog, ...embedPlayCatalog];
