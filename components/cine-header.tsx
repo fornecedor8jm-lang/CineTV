@@ -63,6 +63,7 @@ export function CineHeader() {
             <Link
               key={n.href}
               href={n.href}
+              aria-current={active(n.href) ? 'page' : undefined}
               className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition ${
                 active(n.href)
                   ? 'bg-white/10 text-ink'
@@ -110,7 +111,9 @@ export function CineHeader() {
           <button
             onClick={() => setMobileOpen((v) => !v)}
             className="grid h-9 w-9 place-items-center rounded-full text-ink transition hover:bg-white/10 md:hidden"
-            aria-label="Menu"
+            aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {mobileOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
@@ -120,7 +123,7 @@ export function CineHeader() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-background px-4 py-3 md:hidden">
+        <div id="mobile-navigation" className="border-t border-white/10 bg-background px-4 py-3 md:hidden">
           <form onSubmit={submit} className="relative mb-3">
             <svg
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground"
@@ -141,7 +144,8 @@ export function CineHeader() {
               <Link
                 key={n.href}
                 href={n.href}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-white/5 hover:text-ink"
+                aria-current={active(n.href) ? 'page' : undefined}
+                className={`rounded-lg px-3 py-2.5 text-sm font-medium ${active(n.href) ? 'bg-white/10 text-ink' : 'text-muted-foreground hover:bg-white/5 hover:text-ink'}`}
               >
                 {n.label}
               </Link>

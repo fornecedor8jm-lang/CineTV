@@ -12,7 +12,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Cine TV — Streaming de Filmes e Séries em HD',
   description:
-    'Assista a 35 títulos entre filmes, séries e animes em alta definição, com recomendações personalizadas feitas para o seu gosto.',
+    'Assista a filmes, séries, novelas e canais ao vivo em alta definição, com recomendações personalizadas feitas para o seu gosto.',
   applicationName: 'Cine TV',
 };
 

@@ -1,10 +1,13 @@
 'use client';
 
-import { Suspense, useMemo, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { Suspense, useEffect, useMemo, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { MovieCard } from '@/components/movie-card';
 import { useLibrary } from '@/components/library-provider';
 import { ALL_ITEMS, allGenres, type CatalogItem } from '@/lib/catalog';
+
+const normalizeText = (value: string) =>
+  value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 const TYPES = [
   { key: 'Todos', label: 'Todos' },
@@ -16,17 +19,42 @@ const TYPES = [
 
 function Catalog() {
   const params = useSearchParams();
+  const router = useRouter();
   const { myList } = useLibrary();
 
+  const paramsKey = params.toString();
   const initialQ = params.get('q') ?? '';
   const initialType = params.get('type') ?? 'Todos';
+  const initialGenre = params.get('genre') ?? 'Todos';
+  const initialSort = params.get('sort') ?? 'relevancia';
   const onlyList = params.get('list') === '1';
   const only2026 = params.get('year') === '2026';
 
   const [query, setQuery] = useState(initialQ);
   const [type, setType] = useState(initialType);
-  const [genre, setGenre] = useState('Todos');
-  const [sort, setSort] = useState('relevancia');
+  const [genre, setGenre] = useState(initialGenre);
+  const [sort, setSort] = useState(initialSort);
+
+  useEffect(() => {
+    setQuery(params.get('q') ?? '');
+    setType(params.get('type') ?? 'Todos');
+    setGenre(params.get('genre') ?? 'Todos');
+    setSort(params.get('sort') ?? 'relevancia');
+  }, [paramsKey]);
+
+  useEffect(() => {
+    const next = new URLSearchParams();
+    if (query.trim()) next.set('q', query.trim());
+    if (type !== 'Todos') next.set('type', type);
+    if (genre !== 'Todos') next.set('genre', genre);
+    if (sort !== 'relevancia') next.set('sort', sort);
+    if (onlyList) next.set('list', '1');
+    if (only2026) next.set('year', '2026');
+    const timer = window.setTimeout(() => {
+      router.replace(`/browse${next.toString() ? `?${next.toString()}` : ''}`);
+    }, 300);
+    return () => window.clearTimeout(timer);
+  }, [query, type, genre, sort, onlyList, only2026, router]);
 
   const genres = useMemo(() => ['Todos', ...allGenres()], []);
 
@@ -41,13 +69,10 @@ function Catalog() {
     if (type !== 'Todos') items = items.filter((i) => i.type === type);
     if (genre !== 'Todos') items = items.filter((i) => i.genres.includes(genre));
 
-    const q = query.trim().toLowerCase();
+    const q = normalizeText(query.trim());
     if (q) {
       items = items.filter((i) =>
-        [i.title, i.synopsis, ...i.genres, ...i.tags]
-          .join(' ')
-          .toLowerCase()
-          .includes(q),
+        normalizeText([i.title, i.synopsis, ...i.genres, ...i.tags].join(' ')).includes(q),
       );
     }
 
@@ -89,6 +114,7 @@ function Catalog() {
               <button
                 key={t.key}
                 onClick={() => setType(t.key)}
+                aria-pressed={type === t.key}
                 className={`rounded-full border px-4 py-1.5 text-sm font-medium transition ${
                   type === t.key
                     ? 'border-primary bg-primary text-primary-foreground'
@@ -113,8 +139,19 @@ function Catalog() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Buscar título, gênero…"
-                className="h-9 w-56 rounded-full border border-white/10 bg-white/5 pl-9 pr-3 text-sm text-ink placeholder:text-muted-foreground focus:border-primary/60 focus:outline-none"
+                aria-label="Buscar título, gênero ou palavra-chave"
+                className="h-9 w-56 rounded-full border border-white/10 bg-white/5 pl-9 pr-9 text-sm text-ink placeholder:text-muted-foreground focus:border-primary/60 focus:outline-none"
               />
+              {query && (
+                <button
+                  type="button"
+                  onClick={() => setQuery('')}
+                  aria-label="Limpar busca"
+                  className="absolute right-2 top-1/2 grid h-6 w-6 -translate-y-1/2 place-items-center rounded-full text-muted-foreground hover:bg-white/10 hover:text-ink"
+                >
+                  ×
+                </button>
+              )}
             </div>
             <select
               value={genre}
@@ -141,6 +178,22 @@ function Catalog() {
             </select>
           </div>
         </div>
+        {(query || genre !== 'Todos' || type !== 'Todos' || sort !== 'relevancia') && (
+          <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground" aria-live="polite">
+            <span>Filtros ativos:</span>
+            {query && <span className="rounded-full bg-primary/15 px-2.5 py-1 text-primary">Busca: {query}</span>}
+            {type !== 'Todos' && <span className="rounded-full bg-white/10 px-2.5 py-1 text-ink">{type}</span>}
+            {genre !== 'Todos' && <span className="rounded-full bg-white/10 px-2.5 py-1 text-ink">{genre}</span>}
+            {sort !== 'relevancia' && <span className="rounded-full bg-white/10 px-2.5 py-1 text-ink">Ordenação personalizada</span>}
+            <button
+              type="button"
+              onClick={() => { setQuery(''); setGenre('Todos'); setType('Todos'); setSort('relevancia'); }}
+              className="rounded-full border border-primary/40 px-2.5 py-1 text-primary hover:bg-primary/10"
+            >
+              Limpar filtros
+            </button>
+          </div>
+        )}
       </div>
 
       {filtered.length === 0 ? (
@@ -152,16 +205,18 @@ function Catalog() {
                 <path d="M21 21l-4.3-4.3" />
               </svg>
             </div>
-            <p className="font-display text-xl text-ink">Nada por aqui ainda</p>
+            <p className="font-display text-xl text-ink">
+              {query ? `Nenhum título encontrado para “${query}”` : 'Nada por aqui ainda'}
+            </p>
             <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-              Nenhum título corresponde a esses filtros. Tente outra busca ou limpe
-              os filtros.
+              Nenhum título corresponde aos filtros atuais. Tente outra combinação ou limpe os filtros.
             </p>
             <button
               onClick={() => {
                 setQuery('');
                 setGenre('Todos');
                 setType('Todos');
+                setSort('relevancia');
               }}
               className="mt-5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground hover:brightness-110"
             >

@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { ALL_ITEMS } from '@/lib/catalog';
+
+const catalogCount = ALL_ITEMS.length;
 
 export function CineFooter() {
   return (
@@ -16,8 +19,7 @@ export function CineFooter() {
             </span>
           </Link>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Streaming com 35 títulos entre filmes, séries e animes em alta
-            definição, com recomendações que aprendem com o que você assiste.
+            Streaming com {catalogCount} títulos entre filmes, séries, novelas e canais ao vivo em alta definição, com recomendações personalizadas.
           </p>
         </div>
 
@@ -28,6 +30,7 @@ export function CineFooter() {
             <Link href="/browse" className="block text-muted-foreground hover:text-ink">Catálogo completo</Link>
             <Link href="/browse?type=Filme" className="block text-muted-foreground hover:text-ink">Filmes</Link>
             <Link href="/browse?type=Série" className="block text-muted-foreground hover:text-ink">Séries</Link>
+            <Link href="/browse?type=Canal" className="block text-muted-foreground hover:text-ink">Canais ao vivo</Link>
           </div>
           <div className="space-y-2">
             <p className="eyebrow">Coleções</p>
@@ -43,7 +46,7 @@ export function CineFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 py-4 text-center text-xs text-muted-foreground">
-        Cine TV · acervo com 35 títulos · recomendações personalizadas
+        Cine TV · acervo com {catalogCount} títulos · recomendações personalizadas
       </div>
     </footer>
   );

@@ -6,6 +6,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from 'react';
@@ -26,6 +27,9 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [label, setLabel] = useState('');
   const [sourceOverride, setSourceOverride] = useState<string | null>(null);
+  const [isPortrait, setIsPortrait] = useState(false);
+  const [orientationBlocked, setOrientationBlocked] = useState(false);
+  const playerRef = useRef<HTMLDivElement>(null);
   const { markWatched } = useLibrary();
 
   const active = activeId ? getById(activeId) ?? null : null;
@@ -39,25 +43,54 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   }, [markWatched]);
 
   const close = useCallback(() => {
+    if (document.fullscreenElement && document.exitFullscreen) {
+      void document.exitFullscreen().catch(() => undefined);
+    }
+    if ('orientation' in screen && typeof screen.orientation.unlock === 'function') {
+      screen.orientation.unlock();
+    }
     setActiveId(null);
     setSourceOverride(null);
+    setOrientationBlocked(false);
   }, []);
 
   useEffect(() => {
     if (!activeId) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveId(null);
-        setSourceOverride(null);
+      if (e.key === 'Escape') close();
+    };
+    const media = window.matchMedia('(orientation: portrait)');
+    const syncOrientation = () => setIsPortrait(media.matches);
+    const requestLandscape = async () => {
+      try {
+        if (playerRef.current?.requestFullscreen && !document.fullscreenElement) {
+          await playerRef.current.requestFullscreen();
+        }
+        const orientation = screen.orientation as ScreenOrientation & {
+          lock?: (value: string) => Promise<void>;
+        };
+        if (typeof orientation.lock === 'function') {
+          await orientation.lock('landscape');
+        }
+        setOrientationBlocked(false);
+      } catch {
+        setOrientationBlocked(true);
       }
     };
+    syncOrientation();
+    void requestLandscape();
+    media.addEventListener('change', syncOrientation);
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
+      media.removeEventListener('change', syncOrientation);
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      if ('orientation' in screen && typeof screen.orientation.unlock === 'function') {
+        screen.orientation.unlock();
+      }
     };
-  }, [activeId]);
+  }, [activeId, close]);
 
   const value = useMemo(
     () => ({ play, close, active, label, src }),
@@ -69,11 +102,17 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
       {children}
       {active && (
         <div
+          ref={playerRef}
           className="fixed inset-0 z-[90] flex flex-col bg-black/95 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label={active.title}
         >
+          {isPortrait && orientationBlocked && (
+            <div className="mx-4 mt-3 rounded-lg border border-primary/40 bg-primary/15 px-4 py-3 text-sm text-primary md:mx-6">
+              Gire o celular para assistir em modo paisagem. O navegador bloqueou a rotação automática; use o botão de tela cheia do player se necessário.
+            </div>
+          )}
           <div className="flex items-center justify-between gap-4 px-4 py-3 md:px-6">
             <div className="min-w-0">
               <p className="truncate font-display text-lg text-ink md:text-xl">

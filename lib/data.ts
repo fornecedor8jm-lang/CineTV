@@ -1,4 +1,4 @@
-// Catálogo do Cine TV — títulos com player reproduzível e verificado (35 títulos).
+// Catálogo do Cine TV — títulos, novelas e canais com fontes de reprodução configuradas.
 import { migratedCatalog } from './migrated-catalog';
 import { embedPlayCatalog } from './embedplay-catalog';
 import { osDezMandamentosCatalog } from './os-dez-mandamentos';
