@@ -5,11 +5,11 @@ export const migratedCatalog: CatalogItem[] = [
     id: 'xonados-por-voce', title: 'Por Você', year: '2026', type: 'Série',
     genres: ['Novela', 'Drama'], tags: ['Novela', 'Drama'], synopsis: 'Capítulos publicados no acervo Xonados até 19/08/2026.',
     poster: '/posters/por-voce.jpg', hero: '/posters/por-voce.jpg', seasons: '1 temporada', language: 'Português',
-    imdbRating: undefined, rating: '', watchUrl: '', watchLabel: 'Assistir episódio', embedPlayId: '', trailerUrl: '', availability: 'Player EmbedPlay', featured: false,
+    imdbRating: undefined, rating: '', watchUrl: 'https://superflixapi.pro/serie/312650', watchLabel: 'Assistir episódio', embedPlayId: '', trailerUrl: '', availability: 'Player Superflix', featured: false,
     seriesSeasons: [{ number: 1, episodes: [
-      { number: 1, title: 'Episódio de 17/08/2026 · 17/08/2026', watchUrl: 'https://www.xonados.com/@novela/por-voce/17-08-2026/embed' },
-      { number: 2, title: 'Episódio de 18/08/2026 · 18/08/2026', watchUrl: 'https://www.xonados.com/@novela/por-voce/18-08-2026/embed' },
-      { number: 3, title: 'Episódio de 19/08/2026 · 19/08/2026', watchUrl: 'https://www.xonados.com/@novela/por-voce/19-08-2026/embed' },
+      { number: 1, title: 'Episódio de 17/08/2026 · 17/08/2026', watchUrl: 'https://superflixapi.pro/serie/312650' },
+      { number: 2, title: 'Episódio de 18/08/2026 · 18/08/2026', watchUrl: 'https://superflixapi.pro/serie/312650' },
+      { number: 3, title: 'Episódio de 19/08/2026 · 19/08/2026', watchUrl: 'https://superflixapi.pro/serie/312650' },
     ]}],
   },
   {
