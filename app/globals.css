@@ -124,6 +124,8 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    min-width: 320px;
+    overflow-x: clip;
     background-image: radial-gradient(
         1200px 500px at 50% -10%,
         oklch(0.2 0.03 80 / 0.35),
@@ -139,6 +141,14 @@
   ::selection {
     background: oklch(0.78 0.13 80 / 0.35);
     color: oklch(0.97 0.02 85);
+  }
+  img,
+  video,
+  iframe {
+    max-inline-size: 100%;
+  }
+  iframe {
+    border: 0;
   }
 }
 
@@ -206,7 +216,18 @@ nextjs-portal {
   box-shadow: 0 0 0 6px color-mix(in srgb, var(--primary) 22%, transparent);
 }
 
+@media (max-width: 359px) {
+  .catalog-grid {
+    gap-inline: 0.5rem;
+    gap-block: 1.5rem;
+  }
+}
+
 @media (min-width: 1600px) {
+  .catalog-grid {
+    column-gap: 1.25rem;
+  }
+
   .tv-card {
     width: 210px;
   }

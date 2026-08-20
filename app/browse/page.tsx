@@ -225,7 +225,7 @@ function Catalog() {
           </div>
         </div>
       ) : (
-        <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        <div className="catalog-grid mt-8 grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {filtered.map((item) => (
             <MovieCard key={item.id} item={item} />
           ))}
