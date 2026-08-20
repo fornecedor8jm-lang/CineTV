@@ -106,7 +106,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
                   key={src}
                   src={src}
                   className="h-full w-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay *; encrypted-media *; picture-in-picture *; fullscreen *; clipboard-write *; accelerometer *; gyroscope *; web-share *"
                   allowFullScreen
                   title={active.title}
                 />

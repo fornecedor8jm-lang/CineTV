@@ -11,6 +11,7 @@ const TYPES = [
   { key: 'Filme', label: 'Filmes' },
   { key: 'Série', label: 'Séries' },
   { key: 'Anime', label: 'Animes' },
+  { key: 'Canal', label: 'Canais ao vivo' },
 ];
 
 function Catalog() {
@@ -62,7 +63,9 @@ function Catalog() {
     ? 'Minha lista'
     : only2026
       ? 'Lançamentos 2026'
-      : 'Catálogo completo';
+      : type === 'Canal'
+        ? 'Canais ao vivo'
+        : 'Catálogo completo';
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">

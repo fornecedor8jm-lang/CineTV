@@ -2,6 +2,7 @@
 import { migratedCatalog } from './migrated-catalog';
 import { embedPlayCatalog } from './embedplay-catalog';
 import { osDezMandamentosCatalog } from './os-dez-mandamentos';
+import { liveChannelsCatalog } from './live-channels';
 
 export type Episode = { number: number; title: string; synopsis?: string; watchUrl?: string };
 export type Season = { number: number; episodes: Episode[] };
@@ -1869,4 +1870,4 @@ const baseCatalog: CatalogItem[] = [
   },
 ];
 
-export const catalog: CatalogItem[] = [...baseCatalog, ...migratedCatalog, ...embedPlayCatalog, ...osDezMandamentosCatalog];
+export const catalog: CatalogItem[] = [...baseCatalog, ...migratedCatalog, ...embedPlayCatalog, ...osDezMandamentosCatalog, ...liveChannelsCatalog];

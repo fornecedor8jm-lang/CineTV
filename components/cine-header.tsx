@@ -10,6 +10,7 @@ const NAV = [
   { href: '/browse', label: 'Catálogo' },
   { href: '/browse?type=Série', label: 'Séries' },
   { href: '/browse?type=Filme', label: 'Filmes' },
+  { href: '/browse?type=Canal', label: 'Canais ao vivo' },
 ];
 
 export function CineHeader() {

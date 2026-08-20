@@ -14,6 +14,7 @@ export default function Home() {
   const movies = useMemo(() => ALL_ITEMS.filter((i) => i.type === 'Filme'), []);
   const series = useMemo(() => ALL_ITEMS.filter((i) => i.type === 'Série'), []);
   const animes = useMemo(() => ALL_ITEMS.filter((i) => i.type === 'Anime'), []);
+  const liveChannels = useMemo(() => ALL_ITEMS.filter((i) => i.type === 'Canal'), []);
   const launches = useMemo(
     () => ALL_ITEMS.filter((i) => i.year?.includes('2026')).slice(0, 10),
     [],
@@ -84,6 +85,15 @@ export default function Home() {
           items={launches}
           href="/browse?year=2026"
         />
+
+        {liveChannels.length > 0 && (
+          <Row
+            title="Canais ao vivo"
+            eyebrow="Assista agora"
+            items={liveChannels}
+            href="/browse?type=Canal"
+          />
+        )}
 
         <Row
           title="Séries em destaque"

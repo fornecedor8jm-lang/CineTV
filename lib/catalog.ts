@@ -7,7 +7,8 @@ export const ALL_ITEMS: CatalogItem[] = catalog;
 export const FILME = 'Filme';
 export const SERIE = 'Série';
 export const ANIME = 'Anime';
-export const TYPES = [FILME, SERIE, ANIME] as const;
+export const CANAL = 'Canal';
+export const TYPES = [FILME, SERIE, ANIME, CANAL] as const;
 
 export function getById(id: string): CatalogItem | undefined {
   return ALL_ITEMS.find((i) => i.id === id);
@@ -21,7 +22,7 @@ export function watchSource(item: CatalogItem): string | null {
 }
 
 export function isSeries(item: CatalogItem): boolean {
-  return item.type !== FILME;
+  return item.type === SERIE || item.type === ANIME;
 }
 
 export function seasonCount(item: CatalogItem): number {
