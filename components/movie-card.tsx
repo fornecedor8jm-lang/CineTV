@@ -12,10 +12,10 @@ export function MovieCard({ item }: { item: CatalogItem }) {
   const inList = isInList(item.id);
 
   return (
-    <div className="group relative w-[150px] shrink-0 sm:w-[168px]">
+    <div className="tv-card group relative w-[150px] shrink-0 sm:w-[168px]">
       <Link
         href={`/title/${item.id}`}
-        className="relative block aspect-[2/3] w-full overflow-hidden rounded-md bg-surface ring-1 ring-white/5 transition duration-300 group-hover:ring-primary/50"
+        className="relative block aspect-[2/3] w-full overflow-hidden rounded-md bg-surface ring-1 ring-white/5 transition duration-300 group-hover:ring-primary/50 focus-visible:ring-2 focus-visible:ring-primary"
       >
         <Image
           src={item.poster}
@@ -39,7 +39,7 @@ export function MovieCard({ item }: { item: CatalogItem }) {
       <button
         onClick={() => toggleList(item.id)}
         aria-label={inList ? 'Remover da minha lista' : 'Adicionar à minha lista'}
-        className={`absolute right-2 top-2 grid h-8 w-8 place-items-center rounded-full text-ink backdrop-blur transition ${
+        className={`absolute right-2 top-2 z-10 grid h-8 w-8 place-items-center rounded-full text-ink backdrop-blur transition focus-visible:ring-2 focus-visible:ring-primary ${
           inList ? 'bg-primary text-primary-foreground' : 'bg-black/55 hover:bg-primary/90'
         }`}
       >
@@ -57,7 +57,7 @@ export function MovieCard({ item }: { item: CatalogItem }) {
       <div className="mt-2 space-y-1">
         <Link
           href={`/title/${item.id}`}
-          className="block truncate text-sm font-medium text-ink transition hover:text-primary"
+          className="block truncate text-sm font-medium text-ink transition hover:text-primary focus-visible:rounded-sm"
           title={item.title}
         >
           {item.title}
@@ -85,7 +85,7 @@ export function CardPlayButton({ item }: { item: CatalogItem }) {
   return (
     <button
       onClick={() => play(item)}
-      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-110"
+      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-110 focus-visible:ring-2 focus-visible:ring-primary"
     >
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
         <path d="M8 5v14l11-7z" />

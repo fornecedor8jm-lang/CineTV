@@ -198,3 +198,21 @@
 nextjs-portal {
   display: none !important;
 }
+
+/* Smart TV: foco persistente para controle remoto e teclado. */
+:where(a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+
+@media (min-width: 1600px) {
+  .tv-card {
+    width: 210px;
+  }
+
+  :where(a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline-width: 4px;
+    outline-offset: 6px;
+  }
+}

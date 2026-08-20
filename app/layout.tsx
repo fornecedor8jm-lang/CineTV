@@ -7,6 +7,7 @@ import { LibraryProvider } from '@/components/library-provider';
 import { PlayerProvider } from '@/components/player-provider';
 import { CineHeader } from '@/components/cine-header';
 import { CineFooter } from '@/components/cine-footer';
+import { TvNavigation } from '@/components/tv-navigation';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <LibraryProvider>
+          <TvNavigation />
           <PlayerProvider>
             <div className="flex min-h-screen flex-col">
               <CineHeader />
