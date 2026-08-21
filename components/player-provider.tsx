@@ -29,6 +29,10 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const [sourceOverride, setSourceOverride] = useState<string | null>(null);
   const [isPortrait, setIsPortrait] = useState(false);
   const [orientationBlocked, setOrientationBlocked] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [loadError, setLoadError] = useState(false);
+  const [retryNonce, setRetryNonce] = useState(0);
   const playerRef = useRef<HTMLDivElement>(null);
   const { markWatched } = useLibrary();
 
@@ -38,6 +42,9 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const play = useCallback((item: CatalogItem, opts?: { label?: string; src?: string }) => {
     setLabel(opts?.label ?? '');
     setSourceOverride(opts?.src ?? null);
+    setLoadError(false);
+    setIsLoading(true);
+    setRetryNonce(0);
     setActiveId(item.id);
     markWatched(item.id, 0.05);
   }, [markWatched]);
@@ -52,6 +59,33 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     setActiveId(null);
     setSourceOverride(null);
     setOrientationBlocked(false);
+    setIsFullscreen(false);
+    setIsLoading(false);
+    setLoadError(false);
+  }, []);
+
+  const enterFullscreen = useCallback(async () => {
+    try {
+      if (!playerRef.current) return;
+      if (!document.fullscreenElement && playerRef.current.requestFullscreen) {
+        await playerRef.current.requestFullscreen();
+      }
+      const orientation = screen.orientation as ScreenOrientation & {
+        lock?: (value: 'landscape' | 'portrait') => Promise<void>;
+      };
+      if (typeof orientation.lock === 'function') {
+        await orientation.lock('landscape');
+      }
+      setOrientationBlocked(false);
+    } catch {
+      setOrientationBlocked(true);
+    }
+  }, []);
+
+  const retryPlayback = useCallback(() => {
+    setLoadError(false);
+    setIsLoading(true);
+    setRetryNonce((value) => value + 1);
   }, []);
 
   useEffect(() => {
@@ -61,29 +95,16 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     };
     const media = window.matchMedia('(orientation: portrait)');
     const syncOrientation = () => setIsPortrait(media.matches);
-    const requestLandscape = async () => {
-      try {
-        if (playerRef.current?.requestFullscreen && !document.fullscreenElement) {
-          await playerRef.current.requestFullscreen();
-        }
-        const orientation = screen.orientation as ScreenOrientation & {
-          lock?: (value: string) => Promise<void>;
-        };
-        if (typeof orientation.lock === 'function') {
-          await orientation.lock('landscape');
-        }
-        setOrientationBlocked(false);
-      } catch {
-        setOrientationBlocked(true);
-      }
-    };
+    const syncFullscreen = () => setIsFullscreen(Boolean(document.fullscreenElement));
     syncOrientation();
-    void requestLandscape();
+    syncFullscreen();
     media.addEventListener('change', syncOrientation);
+    document.addEventListener('fullscreenchange', syncFullscreen);
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
       media.removeEventListener('change', syncOrientation);
+      document.removeEventListener('fullscreenchange', syncFullscreen);
       window.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
       if ('orientation' in screen && typeof screen.orientation.unlock === 'function') {
@@ -127,8 +148,17 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
                 Full HD
               </span>
               <button
+                type="button"
+                onClick={() => void enterFullscreen()}
+                aria-label={isFullscreen ? 'Tela cheia ativada' : 'Abrir em tela cheia e modo paisagem'}
+                className="inline-flex rounded-full border border-border px-3 py-2 text-xs text-ink transition hover:border-primary hover:text-primary"
+              >
+                {isFullscreen ? 'Tela cheia' : 'Tela cheia'}
+              </button>
+              <button
+                type="button"
                 onClick={close}
-                aria-label="Fechar reprodutor"
+                aria-label="Fechar player"
                 className="grid h-10 w-10 place-items-center rounded-full border border-border text-ink transition hover:border-primary hover:text-primary"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -142,13 +172,41 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
             {src ? (
               <div className="relative h-full w-full overflow-hidden rounded-lg bg-black ring-1 ring-border">
                 <iframe
-                  key={src}
+                  key={`${src}-${retryNonce}`}
                   src={src}
                   className="h-full w-full"
                   allow="autoplay *; encrypted-media *; picture-in-picture *; fullscreen *; clipboard-write *; accelerometer *; gyroscope *; web-share *"
                   allowFullScreen
                   title={active.title}
+                  onLoad={() => {
+                    setIsLoading(false);
+                    setLoadError(false);
+                  }}
+                  onError={() => {
+                    setIsLoading(false);
+                    setLoadError(true);
+                  }}
                 />
+                {isLoading && !loadError && (
+                  <div className="absolute inset-0 grid place-items-center bg-black/70 text-sm text-ink" role="status">
+                    Carregando vídeo…
+                  </div>
+                )}
+                {loadError && (
+                  <div className="absolute inset-0 grid place-items-center bg-black/85 px-6 text-center text-ink" role="alert">
+                    <div>
+                      <p className="font-display text-xl">Não foi possível carregar o vídeo.</p>
+                      <p className="mt-2 text-sm text-muted-foreground">Verifique sua conexão e tente novamente.</p>
+                      <button
+                        type="button"
+                        onClick={retryPlayback}
+                        className="mt-5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition hover:brightness-110"
+                      >
+                        Tentar novamente
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="grid h-full w-full place-items-center rounded-lg bg-surface ring-1 ring-border">
