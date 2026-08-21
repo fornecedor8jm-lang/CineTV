@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { AgentationGuard } from '@/components/AgentationGuard';
 import { HappySeedsWatermark } from '@/components/HappySeedsWatermark';
 import { LibraryProvider } from '@/components/library-provider';
+import { AuthProvider } from '@/components/auth-provider';
 import { PlayerProvider } from '@/components/player-provider';
 import { CineHeader } from '@/components/cine-header';
 import { CineFooter } from '@/components/cine-footer';
@@ -44,16 +45,18 @@ export default function RootLayout({
         )}
       </head>
       <body className="antialiased">
-        <LibraryProvider>
-          <TvNavigation />
+        <AuthProvider>
+          <LibraryProvider>
+            <TvNavigation />
           <PlayerProvider>
             <div className="flex min-h-screen flex-col">
               <CineHeader />
               <main className="flex-1">{children}</main>
               <CineFooter />
             </div>
-          </PlayerProvider>
-        </LibraryProvider>
+            </PlayerProvider>
+          </LibraryProvider>
+        </AuthProvider>
         <HappySeedsWatermark />
         <AgentationGuard />
         {process.env.NODE_ENV === 'production' && <Analytics />}

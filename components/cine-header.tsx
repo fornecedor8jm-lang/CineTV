@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useLibrary } from '@/components/library-provider';
+import { useAuth } from '@/components/auth-provider';
 
 const NAV = [
   { href: '/', label: 'Início' },
@@ -20,6 +21,7 @@ export function CineHeader() {
   const router = useRouter();
   const pathname = usePathname();
   const { myList } = useLibrary();
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -91,6 +93,24 @@ export function CineHeader() {
               className="h-9 w-48 rounded-full border border-white/10 bg-white/5 pl-9 pr-3 text-sm text-ink placeholder:text-muted-foreground focus:border-primary/60 focus:outline-none transition-all md:w-56"
             />
           </form>
+
+          {user ? (
+            <button
+              type="button"
+              onClick={() => void logout()}
+              className="rounded-full border border-white/10 px-3 py-1.5 text-sm font-medium text-muted-foreground transition hover:border-primary/40 hover:text-primary"
+              title={`Sair de ${user.email}`}
+            >
+              Sair
+            </button>
+          ) : (
+            <Link
+              href="/login"
+              className="rounded-full border border-primary/40 px-3 py-1.5 text-sm font-medium text-primary transition hover:bg-primary/10"
+            >
+              Entrar
+            </Link>
+          )}
 
           <Link
             href="/browse?list=1"

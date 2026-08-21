@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from 'react';
 import { ALL_ITEMS, getById, type CatalogItem } from '@/lib/catalog';
+import { useAuth } from '@/components/auth-provider';
 
 type HistoryEntry = { id: string; pct: number; at: number };
 
@@ -46,6 +47,7 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
   const [myList, setMyList] = useState<string[]>(() =>
     readJson<string[]>(LIST_KEY, []),
   );
+  const { user, loading: authLoading } = useAuth();
 
   useEffect(() => {
     try {
@@ -63,11 +65,44 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
     }
   }, [myList]);
 
+  useEffect(() => {
+    if (authLoading || !user) return;
+    let cancelled = false;
+    void fetch('/api/library', { credentials: 'include', cache: 'no-store' })
+      .then((response) => response.ok ? response.json() : null)
+      .then((data: { list?: string[]; history?: HistoryEntry[] } | null) => {
+        if (cancelled || !data) return;
+        setMyList((local) => Array.from(new Set([...local, ...(data.list ?? [])])));
+        setHistory((local) => {
+          const byId = new Map((data.history ?? []).map((entry) => [entry.id, entry]));
+          local.forEach((entry) => {
+            const remote = byId.get(entry.id);
+            if (!remote || remote.at > entry.at) byId.set(entry.id, entry);
+          });
+          return Array.from(byId.values()).sort((a, b) => b.at - a.at);
+        });
+      })
+      .catch(() => undefined);
+    return () => { cancelled = true; };
+  }, [authLoading, user]);
+
+  const sync = useCallback((payload: Record<string, string | number>) => {
+    if (!user) return;
+    void fetch('/api/library', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    }).catch(() => undefined);
+  }, [user]);
+
   const toggleList = useCallback((id: string) => {
-    setMyList((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
-    );
-  }, []);
+    setMyList((prev) => {
+      const removing = prev.includes(id);
+      sync({ action: removing ? 'list-remove' : 'list-add', titleId: id });
+      return removing ? prev.filter((x) => x !== id) : [...prev, id];
+    });
+  }, [sync]);
 
   const isInList = useCallback(
     (id: string) => myList.includes(id),
@@ -75,11 +110,13 @@ export function LibraryProvider({ children }: { children: ReactNode }) {
   );
 
   const markWatched = useCallback((id: string, pct: number) => {
+    const at = Date.now();
     setHistory((prev) => [
-      { id, pct, at: Date.now() },
+      { id, pct, at },
       ...prev.filter((h) => h.id !== id),
     ]);
-  }, []);
+    sync({ action: 'history-upsert', titleId: id, progressSeconds: Math.round(pct * 1000), durationSeconds: 1000 });
+  }, [sync]);
 
   const watchedIds = useMemo(
     () => new Set(history.map((h) => h.id)),
