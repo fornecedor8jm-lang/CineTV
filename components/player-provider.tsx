@@ -34,12 +34,14 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
   const [loadError, setLoadError] = useState(false);
   const [retryNonce, setRetryNonce] = useState(0);
   const playerRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
   const { markWatched } = useLibrary();
 
   const active = activeId ? getById(activeId) ?? null : null;
   const src = sourceOverride ?? (active ? watchSource(active) : null);
 
   const play = useCallback((item: CatalogItem, opts?: { label?: string; src?: string }) => {
+    previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setLabel(opts?.label ?? '');
     setSourceOverride(opts?.src ?? null);
     setLoadError(false);
@@ -62,6 +64,8 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     setIsFullscreen(false);
     setIsLoading(false);
     setLoadError(false);
+    previousFocusRef.current?.focus({ preventScroll: true });
+    previousFocusRef.current = null;
   }, []);
 
   const enterFullscreen = useCallback(async () => {
@@ -90,6 +94,11 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!activeId) return;
+    const focusTimer = window.setTimeout(() => {
+      const closeButton = document.querySelector<HTMLElement>('[data-tv-player-close]');
+      closeButton?.focus({ preventScroll: true });
+      closeButton?.scrollIntoView({ block: 'nearest' });
+    }, 80);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') close();
     };
@@ -103,6 +112,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => {
+      window.clearTimeout(focusTimer);
       media.removeEventListener('change', syncOrientation);
       document.removeEventListener('fullscreenchange', syncFullscreen);
       window.removeEventListener('keydown', onKey);
@@ -124,7 +134,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
       {active && (
         <div
           ref={playerRef}
-          className="fixed inset-0 z-[90] flex flex-col bg-black/95 backdrop-blur-sm"
+          className="tv-player-shell fixed inset-0 z-[90] flex flex-col bg-black/95 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
           aria-label={active.title}
@@ -158,8 +168,9 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
               <button
                 type="button"
                 onClick={close}
+                data-tv-player-close
                 aria-label="Fechar player"
-                className="grid h-10 w-10 place-items-center rounded-full border border-border text-ink transition hover:border-primary hover:text-primary"
+                className="grid h-12 w-12 place-items-center rounded-full border border-border text-ink transition hover:border-primary hover:text-primary"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M6 6l12 12M18 6L6 18" />

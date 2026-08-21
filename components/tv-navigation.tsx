@@ -49,10 +49,15 @@ function moveFocus(key: string) {
 
 export function TvNavigation() {
   useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const tvUserAgent = /Android TV|GoogleTV|SMART-TV|SmartTV|AFT[A-Z0-9]|BRAVIA|NetCast/i.test(userAgent);
+    const largeRemoteScreen = window.matchMedia('(min-width: 1200px) and (hover: none) and (pointer: coarse)').matches;
+    document.documentElement.classList.toggle('tv-mode', tvUserAgent || largeRemoteScreen);
+
     const initialFocus = window.setTimeout(() => {
-      const first = document.querySelector<HTMLElement>('header a[href], main a[href], main button');
+      const first = document.querySelector<HTMLElement>('[data-tv-primary], [data-tv-focus], header a[href], main a[href], main button');
       first?.focus({ preventScroll: true });
-    }, 150);
+    }, 250);
     const onKeyDown = (event: KeyboardEvent) => {
       if (REMOTE_BACK_KEYS.has(event.key)) {
         event.preventDefault();
@@ -70,6 +75,7 @@ export function TvNavigation() {
     return () => {
       window.clearTimeout(initialFocus);
       window.removeEventListener('keydown', onKeyDown);
+      document.documentElement.classList.remove('tv-mode');
     };
   }, []);
 

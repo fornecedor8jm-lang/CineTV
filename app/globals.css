@@ -237,3 +237,81 @@ nextjs-portal {
     outline-offset: 6px;
   }
 }
+
+/* Experiência dedicada para Android TV, Google TV e Smart TVs. */
+html.tv-mode body {
+  min-width: 960px;
+}
+
+html.tv-mode main,
+html.tv-mode header > div,
+html.tv-mode footer > div {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+html.tv-mode .tv-card {
+  width: 220px;
+}
+
+html.tv-mode .tv-card > a:first-child {
+  border-radius: 10px;
+}
+
+html.tv-mode .tv-card > a:first-child:focus-visible {
+  transform: scale(1.06);
+  z-index: 4;
+  box-shadow: 0 0 0 4px var(--primary), 0 0 0 9px color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+html.tv-mode .tv-card button {
+  height: 46px;
+  width: 46px;
+  font-size: 18px;
+}
+
+html.tv-mode .tv-card .mt-2 a {
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+html.tv-mode .tv-card .text-\[11px\] {
+  font-size: 14px;
+}
+
+html.tv-mode .catalog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px 22px;
+}
+
+html.tv-mode .snap-row {
+  gap: 22px;
+  padding-block: 10px 18px;
+}
+
+html.tv-mode .snap-row > div {
+  scroll-snap-align: start;
+}
+
+html.tv-mode .tv-action-primary,
+html.tv-mode button,
+html.tv-mode a {
+  min-height: 48px;
+}
+
+html.tv-mode .tv-action-primary {
+  padding-inline: 28px;
+  font-size: 16px;
+}
+
+html.tv-mode :where(a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline-width: 4px;
+  outline-offset: 6px;
+  box-shadow: 0 0 0 9px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+@media (orientation: landscape) and (min-width: 900px) {
+  .tv-player-shell {
+    padding: 24px 5vw;
+  }
+}

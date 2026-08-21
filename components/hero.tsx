@@ -53,8 +53,9 @@ export function Hero({ item }: { item: CatalogItem }) {
 
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <button
+              data-tv-primary
               onClick={() => play(item)}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
+              className="tv-action-primary inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
